@@ -74,7 +74,7 @@ services:
       DATABASE_SAVE_DATA_CHATS: "true"
       INTEGRATIONS: "WHATSAPP-BAILEYS"
     volumes:
-      - v_evolution_pro:/evolution/instances
+      - v_evolution_pro_v2:/evolution/instances
     depends_on:
       - db-whatsapp
     networks:
@@ -86,5 +86,5 @@ networks:
 
 volumes:
   v_db_legal_pro:
-  v_evolution_pro:
+  v_evolution_pro_v2:
   v_db_whatsapp_pro:
