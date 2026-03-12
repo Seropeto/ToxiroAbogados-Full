@@ -32,8 +32,6 @@ services:
     image: directus/directus:latest
     container_name: api-legal-pro
     restart: always
-    ports:
-      - "8055:8055"
     environment:
       KEY: ${DIRECTUS_KEY}
       SECRET: ${DIRECTUS_SECRET}
@@ -56,8 +54,6 @@ services:
     image: n8nio/n8n:latest
     container_name: n8n-legal-pro
     restart: always
-    ports:
-      - "5678:5678"
     volumes:
       - v_n8n_pro:/home/node/.n8n
     environment:
@@ -71,8 +67,6 @@ services:
     image: atendai/evolution-api:v2.2.0
     container_name: whatsapp-api-pro
     restart: always
-    ports:
-      - "8080:8080"
     environment:
       AUTHENTICATION_API_KEY: ${EVO_API_KEY}
       AUTHENTICATION_TYPE: "apikey"
