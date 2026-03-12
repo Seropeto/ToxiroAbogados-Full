@@ -24,7 +24,7 @@ services:
       POSTGRES_PASSWORD: ${EVO_DB_PASSWORD}
       POSTGRES_DB: ${EVO_DB_NAME:-evolution_db}
     volumes:
-      - v_db_whatsapp_pro:/var/lib/postgresql/data
+      - v_db_whatsapp_pro_v2:/var/lib/postgresql/data
     networks:
       - net-pro
 
@@ -87,4 +87,4 @@ networks:
 volumes:
   v_db_legal_pro:
   v_evolution_pro_v2:
-  v_db_whatsapp_pro:
+  v_db_whatsapp_pro_v2:
