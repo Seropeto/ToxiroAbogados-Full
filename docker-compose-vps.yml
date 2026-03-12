@@ -50,19 +50,6 @@ services:
     networks:
       - net-pro
 
-  n8n-legal:
-    image: n8nio/n8n:latest
-    container_name: n8n-legal-pro
-    restart: always
-    volumes:
-      - v_n8n_pro:/home/node/.n8n
-    environment:
-      N8N_BASIC_AUTH_ACTIVE: "true"
-      N8N_BASIC_AUTH_USER: ${N8N_USER:-admin}
-      N8N_BASIC_AUTH_PASSWORD: ${N8N_PASSWORD}
-    networks:
-      - net-pro
-
   whatsapp-api:
     image: atendai/evolution-api:v2.2.0
     container_name: whatsapp-api-pro
@@ -95,6 +82,5 @@ networks:
 
 volumes:
   v_db_legal_pro:
-  v_n8n_pro:
   v_evolution_pro:
   v_db_whatsapp_pro:
