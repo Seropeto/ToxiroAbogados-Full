@@ -53,7 +53,7 @@ services:
       - net-pro
 
   whatsapp-api:
-    image: atendai/evolution-api:v2.2.0
+    image: atendai/evolution-api:latest
     container_name: whatsapp-api-pro
     restart: always
     labels:
@@ -68,11 +68,12 @@ services:
       DATABASE_CONNECTION_CLIENT: "pg"
       CACHE_REDIS_ENABLED: "false"
       CACHE_LOCAL_ENABLED: "true"
-      DATABASE_SAVE_DATA_INSTANCE: "false"
+      DATABASE_SAVE_DATA_INSTANCE: "true"
       DATABASE_SAVE_DATA_NEW_MESSAGE: "true"
       DATABASE_SAVE_DATA_CONTACTS: "true"
       DATABASE_SAVE_DATA_CHATS: "true"
       INTEGRATIONS: "WHATSAPP-BAILEYS"
+      CONFIG_SESSION_PHONE_VERSION: "2.3000.1017540266"
     volumes:
       - v_evolution_pro_v2:/evolution/instances
     depends_on:
